@@ -18,6 +18,9 @@ object WordCount {
       (word,1)  
     }
     .reduceByKey(_ + _).saveAsTextFile("food.count.txt")
+    
+     val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc);
   }
   
+ 
 }
